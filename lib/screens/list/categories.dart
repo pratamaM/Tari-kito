@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:babylonjs_viewer/babylonjs_viewer.dart';
-
+import 'package:path_provider/path_provider.dart';
 class Categories extends StatefulWidget {
   const Categories({Key key}) : super(key: key);
 
@@ -13,7 +13,7 @@ class _Categories extends State<Categories> {
   final PageStorageBucket _bucket = PageStorageBucket();
   final List<PageItem> _items = [
     PageItem('Gerakan 1', Icons.looks_one_outlined, FavoriteScreen(key: PageStorageKey('key--favorite'))),
-    PageItem('Gerakan 2', Icons.looks_two_outlined, Gerakan2()),
+    PageItem('Gerakan 2', Icons.looks_two_outlined,Gerakan2()),
     PageItem('Gerakan 3', Icons.looks_3_outlined, Gerakan3()),
     PageItem('Gerakan 4', Icons.looks_4_outlined, Gerakan4()),
     PageItem('Gerakan 5', Icons.looks_5_outlined, Gerakan5()),
@@ -25,7 +25,7 @@ class _Categories extends State<Categories> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-        title: SizedBox(width: 250,child: Text(_items[_activeScreenIndex].title,textAlign: TextAlign.center,
+        title: SizedBox(width: 230,child: Text(_items[_activeScreenIndex].title,textAlign: TextAlign.center,
         ),),
       ),
       body: PageStorage(
@@ -74,7 +74,7 @@ class FavoriteScreen extends StatelessWidget {
           onTap: () => showDialogWidget(context),),
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
         body: BabylonJSViewer(
-          src: 'assets/images/jangkrena.glb',
+          src: 'assets/jangkrena.glb',
         ),
       ),
     );
@@ -124,7 +124,7 @@ class Gerakan2 extends StatelessWidget {
           onTap: () => showDialogWidget(context),),
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
         body: BabylonJSViewer(
-          src: 'assets/images/menjonggedang.glb',
+          src: 'assets/menjonggedang.glb',
         ),
       ),
     );
@@ -174,7 +174,7 @@ class Gerakan3 extends StatelessWidget {
           onTap: () => showDialogWidget(context),),
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
         body: BabylonJSViewer(
-          src: 'assets/images/sembahkejoi.glb',
+          src: 'assets/sembahkejoi.glb',
         ),
       ),
     );
@@ -223,7 +223,7 @@ class Gerakan4 extends StatelessWidget {
           onTap: () => showDialogWidget(context),),
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
         body: BabylonJSViewer(
-          src: 'assets/images/andun.glb',
+          src: 'assets/andun.glb',
         ),
       ),
     );
@@ -273,7 +273,7 @@ class Gerakan5 extends StatelessWidget {
           onTap: () => showDialogWidget(context),),
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
         body: BabylonJSViewer(
-          src: 'assets/images/sembah.glb',
+          src: 'assets/sembah.glb',
         ),
       ),
     );

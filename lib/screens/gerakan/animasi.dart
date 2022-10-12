@@ -25,14 +25,13 @@ class _Animasi extends State<Animasi> {
   void initState() {
     super.initState();
     _videoPlayerController1 = VideoPlayerController.asset(
-        'assets/videos/tes.mp4');
+        'assets/videos/Vfix.m4v');
     _chewieController = ChewieController(
         videoPlayerController: _videoPlayerController1,
         fullScreenByDefault: true,
         autoPlay: true,
-        looping: true,
-
-      autoInitialize: true,
+        looping: false,
+      autoInitialize: false,
     );
   }
 

@@ -101,7 +101,7 @@ class CustomAppBar extends StatelessWidget {
     return Consumer<AnimationController>(
       builder: (context, ctrl, child) {
         return Positioned(
-          top: 40,
+          top: s.height*0.04,
           left: s.width * ctrl.value * 0.8 + 20,
           child: child,
         );
@@ -190,7 +190,7 @@ class FenderText extends StatelessWidget {
                     color: Color(0xddffffff),
                     fontWeight: FontWeight.w900,
                     fontStyle: FontStyle.italic,
-                    fontSize: 70,
+                    fontSize: 60,
                     shadows: [
                       Shadow(
                         color: Colors.yellowAccent,
@@ -231,7 +231,7 @@ class Menu extends StatelessWidget {
       },
       child: Container(
         width: s.width,
-        height: s.height * 1.1,
+        height: s.height * 1.2,
         padding: EdgeInsets.only(left: s.width * 0.2 + 30, top: 110),
         color: beige,
         child: Column(
@@ -267,7 +267,7 @@ class Menu extends StatelessWidget {
                 height: 1.5,
               ),
             ),
-            Text("\n\n\n\n\n\n\n"),
+            Spacer(flex: 10),
             InkWell(
               child: Container(
                 child: Text('INFO',
@@ -278,7 +278,7 @@ class Menu extends StatelessWidget {
                   letterSpacing: 0.5,
                   height: 1.5,) ),),
               onTap:  () => push(context, IntroPage()),
-        ),Spacer(),
+        ),Spacer(flex: 1),
             InkWell(
 
               child: Container(
@@ -321,7 +321,7 @@ class Guitar extends StatelessWidget {
       builder: (context, ctrl, child) {
         return Positioned(
           top: 0,
-          left: s.width * ctrl.value+20,
+          left: s.width * ctrl.value+30,
           child: IgnorePointer(
             child: Container(
               width: s.width,
@@ -349,7 +349,7 @@ class Guitar extends StatelessWidget {
 
                   Sprite(
                     frameHeight: s.height,
-                    frameWidth: 250,
+                    frameWidth: 220,
                     anim: anim,
                     frame: 64,
                     img: "assets/images/1.png",
@@ -371,7 +371,7 @@ class BottomInfo extends StatelessWidget {
     return Consumer<AnimationController>(
       builder: (context, ctrl, child) {
         return Positioned(
-          left: s.width * 0.85 * ctrl.value,
+          left: s.width * ctrl.value-20,
           bottom: 20,
           child: Transform(
             transform: Matrix4.identity()
@@ -383,11 +383,10 @@ class BottomInfo extends StatelessWidget {
         );
       },
       child: Container(
-        width: s.width+600,
+        width: s.width * 2,
         padding: EdgeInsets.symmetric(horizontal: 60),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               "BENGKULU",
@@ -400,7 +399,7 @@ class BottomInfo extends StatelessWidget {
                   Shadow(
                     color: Colors.black,
                     blurRadius: 70,
-                    offset: Offset(5.0, 0.0),
+                    offset: Offset(5, 0.0),
                   ),
                 ],
               ),

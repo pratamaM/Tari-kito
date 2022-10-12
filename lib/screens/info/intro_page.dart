@@ -30,20 +30,18 @@ class _IntroPageState extends State<IntroPage> {
               controller: controller,
               children: <Widget>[
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 32,vertical: 10 ),
                       child: Text(
-
-                        '\n\n\n\n'
                             'TARI PERSEMBAHAN BENGKULU',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontStyle: FontStyle.italic,
-                            fontSize: 24),
+                            fontSize: 21),
                       ),
                     ),
                     Padding(
@@ -52,8 +50,8 @@ class _IntroPageState extends State<IntroPage> {
                       child: Text(
                         'Tari Persembahan Bengkulu biasanya di kenal juga dengan sebutan Tarian Sekapur Siri.\n',
                         textAlign: TextAlign.left,
-                        style: TextStyle(color: Colors.black, fontSize: 21,
-                          fontWeight: FontWeight.bold,
+                        style: TextStyle(color: Colors.black, fontSize: 18,
+
                         ),
                       ),
                     ),
@@ -65,8 +63,8 @@ class _IntroPageState extends State<IntroPage> {
                         'Kotamadya, Bengkulu Utara, Bengkulu Selatan, dan Rejang Lebong.\n',
 
                         textAlign: TextAlign.right,
-                        style: TextStyle(color: Colors.black, fontSize: 21,
-                          fontWeight: FontWeight.bold,
+                        style: TextStyle(color: Colors.black, fontSize: 18,
+
                         ),
                       ),
                     ),
@@ -78,22 +76,22 @@ class _IntroPageState extends State<IntroPage> {
                         'Bengkulu Tengah, Bengkulu Selatan, Bengkulu Utara, Muko-muko, Rejang Lebong, Kepahyang dan Lebong.',
 
                         textAlign: TextAlign.left,
-                        style: TextStyle(color: Colors.black, fontSize: 21,
-                          fontWeight: FontWeight.bold,
+                        style: TextStyle(color: Colors.black, fontSize: 18,
+
                         ),
                       ),
                     ),
                   ],
                 ),
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 32),
                       child: Text(
-                        '\n\n\n\n\n\nTujuan',
+                        'Tujuan',
                         style: TextStyle(fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,color: Colors.black, fontSize: 24.0),
                       ),
                     ),
@@ -128,7 +126,7 @@ class _IntroPageState extends State<IntroPage> {
                   ],
                 ),
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Padding(
@@ -136,8 +134,8 @@ class _IntroPageState extends State<IntroPage> {
 
                           horizontal: 32),
                       child: Text(
-                        '\n\n\n\n\nInstrumen Musik',
-                        style: TextStyle(fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,color: Colors.black, fontSize: 24.0),
+                        'Instrumen Musik',
+                        style: TextStyle(fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,color: Colors.black, fontSize: 24),
                       ),
                     ),
                     Padding(
@@ -148,7 +146,7 @@ class _IntroPageState extends State<IntroPage> {
                         'serunai dan dua gendang panjang, serta kelintang. Lagu yang dimainkan oleh serunai '
                         'adalah lagu belarak.',
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.black, fontSize: 20.0),
+                        style: TextStyle(color: Colors.black, fontSize: 18.0),
                       ),
                     ),
                     Padding(
@@ -165,13 +163,13 @@ class _IntroPageState extends State<IntroPage> {
                       child: Text(
                         'Properti yang wajib ada pada saat tari Persembahan adalah Cerano yaitu wadah untuk tempat kapur dan sirih',
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.black, fontSize: 20.0),
+                        style: TextStyle(color: Colors.black, fontSize: 18.0),
                       ),
                     ),
                     Center(
                       child: Image.asset(
                         'assets/images/hh.png',
-                        height: 150,
+                        height: 100,
 
                       ),
                     ),
@@ -218,55 +216,29 @@ class _IntroPageState extends State<IntroPage> {
                       ],
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Opacity(
                           opacity: pageIndex != 3 ? 1.0 : 0.0,
-                          child: FlatButton(
-                            splashColor: Colors.transparent,
-                            child: Text(
-                              'KEMBALI',
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                            onPressed: () {
-                              Navigator.of(context).pop(true);
-                            },
-                          ),
                         ),
                         pageIndex != 2
                             ? FlatButton(
-                                splashColor: Colors.transparent,
-                                child: Text(
-                                  'LANJUT',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                ),
-                                onPressed: () {
-                                  if (!(controller.page == 2.0))
-                                    controller.nextPage(
-                                        duration: Duration(milliseconds: 200),
-                                        curve: Curves.linear);
-                                },
+
                               )
                             : FlatButton(
-                                splashColor: Colors.transparent,
-                                child: Text(
-                                  'LIHAT GERAKAN',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16),
-                                ),
-                                onPressed: () {
-                                  Navigator.of(context).pushReplacement(
-                                      MaterialPageRoute(
-                                          builder: (context) => Categories()));
-                                },
+                          splashColor: Colors.transparent,
+                          child: Text(
+                            'LIHAT GERAKAN',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pushReplacement(
+                                MaterialPageRoute(
+                                    builder: (context) => Categories()));
+                          },
                               )
                       ],
                     ),
