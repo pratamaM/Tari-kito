@@ -352,7 +352,7 @@ class Guitar extends StatelessWidget {
                     frameWidth: 220,
                     anim: anim,
                     frame: 64,
-                    img: "assets/images/1.png",
+                    img: "assets/gambar/1.png",
                   ),
                 ],
               ),
