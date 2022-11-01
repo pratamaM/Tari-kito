@@ -2,7 +2,7 @@
 
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.guitar">
+    package="com.bkl.tari">
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
          calls FlutterMain.startInitialization(this); in its onCreate method.

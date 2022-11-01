@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:babylonjs_viewer/babylonjs_viewer.dart';
-import 'package:path_provider/path_provider.dart';
 class Categories extends StatefulWidget {
   const Categories({Key key}) : super(key: key);
 

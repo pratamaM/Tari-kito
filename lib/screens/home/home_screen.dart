@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 color: Color(0xc78d1111),
               ),
               FenderText(),
-              Guitar(
+              tari(
                 anim: anim.value.toDouble(),
               ),
               Menu(),
@@ -269,38 +269,34 @@ class Menu extends StatelessWidget {
             ),
             Spacer(flex: 10),
             InkWell(
-              child: Container(
-                child: Text('INFO',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 27,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 0.5,
-                  height: 1.5,) ),),
-              onTap:  () => push(context, IntroPage()),
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  minimumSize: Size(50,50),
+                  textStyle: TextStyle(fontSize: 27,fontWeight: FontWeight.bold),
+                  primary: Colors.black,),
+                child: Text('INFO'),
+                onPressed:  () => push(context, IntroPage()),
+    ),
         ),Spacer(flex: 1),
             InkWell(
-
-              child: Container(
-                child: Text('GERAKAN',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 27,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 0.5,
-                      height: 1.5,) ),),
-              onTap:  () => push(context, Categories()),
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  minimumSize: Size(50,50),
+                  textStyle: TextStyle(fontSize: 27,fontWeight: FontWeight.bold),
+                  primary: Colors.black,),
+                child: Text('GERAKAN'),
+                onPressed:  () => push(context, Categories()),
+              ),
             ),Spacer(),
             InkWell(
-              child: Container(
-                child: Text('ANIMASI',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 27,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 0.5,
-                      height: 1.5,) ),),
-              onTap:  () => push(context, Animasi()),
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  minimumSize: Size(50,50),
+                  textStyle: TextStyle(fontSize: 27,fontWeight: FontWeight.bold),
+                  primary: Colors.black,),
+                child: Text('ANIMASI'),
+                onPressed:  () => push(context, Animasi()),
+              ),
             ),Spacer(),
             SizedBox(height: 250),
           ],
@@ -310,10 +306,10 @@ class Menu extends StatelessWidget {
   }
 }
 
-class Guitar extends StatelessWidget {
+class tari extends StatelessWidget {
   final double anim;
 
-  const Guitar({Key key, this.anim}) : super(key: key);
+  const tari({Key key, this.anim}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     Size s = MediaQuery.of(context).size;
