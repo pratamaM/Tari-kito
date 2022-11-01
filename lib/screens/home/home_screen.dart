@@ -273,8 +273,8 @@ class Menu extends StatelessWidget {
                 style: TextButton.styleFrom(
                   minimumSize: Size(50,50),
                   textStyle: TextStyle(fontSize: 27,fontWeight: FontWeight.bold),
-                  primary: Colors.black,),
-                child: Text('INFO'),
+                  primary: Colors.white,),
+                child: Text('INFO', style: TextStyle(color: Colors.black,)),
                 onPressed:  () => push(context, IntroPage()),
     ),
         ),Spacer(flex: 1),
@@ -283,8 +283,8 @@ class Menu extends StatelessWidget {
                 style: TextButton.styleFrom(
                   minimumSize: Size(50,50),
                   textStyle: TextStyle(fontSize: 27,fontWeight: FontWeight.bold),
-                  primary: Colors.black,),
-                child: Text('GERAKAN'),
+                  primary: Colors.white,),
+                child: Text('GERAKAN', style: TextStyle(color: Colors.black,),),
                 onPressed:  () => push(context, Categories()),
               ),
             ),Spacer(),
@@ -293,8 +293,8 @@ class Menu extends StatelessWidget {
                 style: TextButton.styleFrom(
                   minimumSize: Size(50,50),
                   textStyle: TextStyle(fontSize: 27,fontWeight: FontWeight.bold),
-                  primary: Colors.black,),
-                child: Text('ANIMASI'),
+                  primary: Colors.white,),
+                child: Text('ANIMASI', style: TextStyle(color: Colors.black,)),
                 onPressed:  () => push(context, Animasi()),
               ),
             ),Spacer(),

@@ -56,11 +56,13 @@ class _Animasi extends State<Animasi> {
                 ),
               ),
             ),
-            FlatButton(
+            TextButton(
+            style: TextButton.styleFrom(
+            minimumSize: Size(450,50)),
               onPressed: () {
                 Navigator.of(context).pop(true);
               },
-              child: Text('Kembali'),
+              child: Text('Kembali',style: TextStyle(color: Colors.black,)),
             ),
           ],
         ),

@@ -222,11 +222,12 @@ class _IntroPageState extends State<IntroPage> {
                           opacity: pageIndex != 3 ? 1.0 : 0.0,
                         ),
                         pageIndex != 2
-                            ? FlatButton(
+                            ? TextButton(
 
                               )
-                            : FlatButton(
-                          splashColor: Colors.transparent,
+                            : TextButton(
+                          style: TextButton.styleFrom(
+                            minimumSize: Size(400,50),),
                           child: Text(
                             'LIHAT GERAKAN',
                             style: TextStyle(
