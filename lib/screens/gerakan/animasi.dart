@@ -31,7 +31,7 @@ class _Animasi extends State<Animasi> {
         fullScreenByDefault: true,
         autoPlay: true,
         looping: false,
-      autoInitialize: false,
+      autoInitialize: true,
     );
   }
 
@@ -60,7 +60,11 @@ class _Animasi extends State<Animasi> {
             style: TextButton.styleFrom(
             minimumSize: Size(450,50)),
               onPressed: () {
+                _videoPlayerController1.dispose();
                 Navigator.of(context).pop(true);
+                // _chewieController = ChewieController(
+                //     videoPlayerController: _videoPlayerController1,
+                // autoPlay: false,);
               },
               child: Text('Kembali',style: TextStyle(color: Colors.black,)),
             ),

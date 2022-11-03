@@ -123,7 +123,7 @@ class Gerakan2 extends StatelessWidget {
           onTap: () => showDialogWidget(context),),
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
         body: BabylonJSViewer(
-          src: 'assets/menjonggedang.glb',
+          src: 'assets/menjong_gedang.glb',
         ),
       ),
     );
