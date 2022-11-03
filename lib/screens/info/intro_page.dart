@@ -12,6 +12,7 @@ class _IntroPageState extends State<IntroPage> {
 
   @override
   Widget build(BuildContext context) {
+    Size s = MediaQuery.of(context).size;
     return Material(
       child: Container(
         decoration: BoxDecoration(
@@ -227,7 +228,7 @@ class _IntroPageState extends State<IntroPage> {
                               )
                             : TextButton(
                           style: TextButton.styleFrom(
-                            minimumSize: Size(400,50),),
+                            minimumSize: Size(s.width,50),),
                           child: Text(
                             'LIHAT GERAKAN',
                             style: TextStyle(

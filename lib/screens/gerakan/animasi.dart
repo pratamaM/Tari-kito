@@ -37,6 +37,7 @@ class _Animasi extends State<Animasi> {
 
   @override
   Widget build(BuildContext context) {
+    Size s = MediaQuery.of(context).size;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Tari Persembahan Bengkulu',
@@ -58,7 +59,7 @@ class _Animasi extends State<Animasi> {
             ),
             TextButton(
             style: TextButton.styleFrom(
-            minimumSize: Size(450,50)),
+            minimumSize: Size(s.width,50)),
               onPressed: () {
                 _videoPlayerController1.dispose();
                 Navigator.of(context).pop(true);

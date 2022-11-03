@@ -102,19 +102,19 @@ class CustomAppBar extends StatelessWidget {
       builder: (context, ctrl, child) {
         return Positioned(
           top: s.height*0.04,
-          left: s.width * ctrl.value * 0.8 + 20,
+          left: s.width * ctrl.value /1.3,
           child: child,
         );
       },
       child: Container(
-        width: s.width,
+        width: s.width*1.13,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              width: s.width / 3,
-              alignment: Alignment.centerLeft,
+              width: s.width / 4,
+              alignment: Alignment.center,
               child: IconButton(
                 icon: Icon(Icons.menu,
                 color: Colors.white),
@@ -131,7 +131,7 @@ class CustomAppBar extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w900,
-                  fontStyle: FontStyle.italic,
+
                   fontSize: 25,
                   shadows: [
                     Shadow(
@@ -181,7 +181,7 @@ class FenderText extends StatelessWidget {
           children: [
             Positioned(
               left: 10,
-              top: s.height/6,
+              top: s.height/8,
               child: RotatedBox(
                 quarterTurns: 1,
                 child: Text(
@@ -317,7 +317,7 @@ class tari extends StatelessWidget {
       builder: (context, ctrl, child) {
         return Positioned(
           top: 0,
-          left: s.width * ctrl.value+s.width/9,
+          left: s.width * ctrl.value,
           child: IgnorePointer(
             child: Container(
               width: s.width,
@@ -345,7 +345,7 @@ class tari extends StatelessWidget {
 
                   Sprite(
                     frameHeight: s.height,
-                    frameWidth: 220,
+                    frameWidth: s.width/1.5,
                     anim: anim,
                     frame: 64,
                     img: "assets/gambar/1.png",

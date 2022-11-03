@@ -74,6 +74,7 @@ class FavoriteScreen extends StatelessWidget {
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
         body: BabylonJSViewer(
           src: 'assets/jangkrena.glb',
+
         ),
       ),
     );
