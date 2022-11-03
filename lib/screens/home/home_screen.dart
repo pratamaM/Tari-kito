@@ -181,7 +181,7 @@ class FenderText extends StatelessWidget {
           children: [
             Positioned(
               left: 10,
-              top: s.height * 0.15,
+              top: s.height/6,
               child: RotatedBox(
                 quarterTurns: 1,
                 child: Text(
@@ -190,7 +190,7 @@ class FenderText extends StatelessWidget {
                     color: Color(0xddffffff),
                     fontWeight: FontWeight.w900,
                     fontStyle: FontStyle.italic,
-                    fontSize: 60,
+                    fontSize: 65,
                     shadows: [
                       Shadow(
                         color: Colors.yellowAccent,
@@ -317,7 +317,7 @@ class tari extends StatelessWidget {
       builder: (context, ctrl, child) {
         return Positioned(
           top: 0,
-          left: s.width * ctrl.value+30,
+          left: s.width * ctrl.value+s.width/9,
           child: IgnorePointer(
             child: Container(
               width: s.width,
@@ -367,8 +367,8 @@ class BottomInfo extends StatelessWidget {
     return Consumer<AnimationController>(
       builder: (context, ctrl, child) {
         return Positioned(
-          left: s.width * ctrl.value-20,
-          bottom: 20,
+          left: s.width * ctrl.value,
+          bottom: s.height/50,
           child: Transform(
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.001)
@@ -379,8 +379,8 @@ class BottomInfo extends StatelessWidget {
         );
       },
       child: Container(
-        width: s.width * 2,
-        padding: EdgeInsets.symmetric(horizontal: 60),
+        width: s.width*s.width ,
+        padding: EdgeInsets.symmetric(horizontal:s.width/6.5),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
