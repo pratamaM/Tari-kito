@@ -11,7 +11,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:label="Tari Kito"
-        android:icon="@mipmap/Icon_TariKito"
+        android:icon="@mipmap/ic_TariKito"
         android:usesCleartextTraffic="true"
 
     >
