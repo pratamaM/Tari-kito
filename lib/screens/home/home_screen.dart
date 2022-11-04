@@ -348,7 +348,7 @@ class tari extends StatelessWidget {
                     frameWidth: s.width/1.5,
                     anim: anim,
                     frame: 64,
-                    img: "assets/gambar/1.png",
+                    img: "assets/1.png",
                   ),
                 ],
               ),

@@ -17,7 +17,7 @@ class _IntroPageState extends State<IntroPage> {
       child: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/gambar/gg.png'),
+                image: AssetImage('assets/gg.png'),
               opacity: 0.3,
             )),
         child: Stack(
@@ -169,7 +169,7 @@ class _IntroPageState extends State<IntroPage> {
                     ),
                     Center(
                       child: Image.asset(
-                        'assets/gambar/hh.png',
+                        'assets/hh.png',
                         height: 100,
 
                       ),
